@@ -1,0 +1,214 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.servicess {
+   background-color: $background;
+   padding-top: 8.5rem;
+   padding-bottom: 3rem;
+   &__title {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      h2 {
+         font-family: $font;
+         font-style: normal;
+         font-weight: 500;
+         font-size: 3.8rem;
+         line-height: 4.8rem;
+         color: $blue;
+      }
+   }
+   &__button {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+   }
+   &__content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+   &__footer {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+   }
+}
+.radio__button {
+   font-family: $font;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 1.6rem;
+   line-height: 1.9rem;
+   color: $blue;
+   margin-right: 1.5rem;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   width: 20rem;
+   height: 5rem;
+   border: 1px solid $blue;
+   border-radius: 3rem;
+   background-color: transparent;
+   transition: color 0.2s linear, background-color 0.2s linear;
+   &:last-child {
+      margin-right: 0;
+   }
+   &:hover {
+      cursor: pointer;
+      color: $white;
+      background-color: $blue;
+   }
+}
+.servicess__active {
+   color: $white;
+   background-color: $blue;
+}
+.servicess__card {
+   width: 24%;
+   background-color: $white;
+   padding: 2.5rem 2rem;
+   margin-bottom: 2rem;
+   background: $white;
+   box-shadow: 0px 4px 20px rgba(62, 65, 159, 0.09);
+   border-radius: 1.5rem;
+   &--img {
+      background-color: $background;
+      width: 8.5rem;
+      height: 8.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+   }
+   &--title {
+      margin-bottom: 1.5rem;
+      h3 {
+         font-family: $font;
+         font-style: normal;
+         font-weight: 500;
+         font-size: 2.1rem;
+         line-height: 2.6rem;
+         color: $title;
+      }
+   }
+   &--text {
+      margin-bottom: 1.5rem;
+      p {
+         font-family: "SansSerif";
+         font-style: normal;
+         font-weight: 400;
+         font-size: 1.6rem;
+         line-height: 2.2rem;
+         color: $text;
+      }
+   }
+   &--button {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      button {
+         width: 100%;
+         margin-bottom: 0.8rem;
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+}
+.card__button {
+   font-family: $font;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 1.6rem;
+   line-height: 1.9rem;
+   color: $blue;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   width: 20rem;
+   height: 5rem;
+   border: 1px solid $blue;
+   border-radius: 3rem;
+   background-color: transparent;
+   transition: color 0.2s linear, background-color 0.2s linear;
+   &:hover {
+      cursor: pointer;
+      color: $white;
+      background-color: $blue;
+   }
+}
+.card__active {
+   color: $white;
+   background-color: $blue;
+   &:hover {
+      color: $blue;
+      background-color: transparent;
+   }
+}
+.preview__card {
+   width: 5.5rem;
+   height: 5.5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   border: 1px solid $blue;
+   background-color: $blue;
+   margin-right: 2rem;
+   transition: background-color 0.2s linear;
+   span {
+      display: block;
+      border-top: 1px solid;
+      border-left: 1px solid;
+      border-color: $white;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: -0.5rem;
+      transform: rotate(-45deg);
+      transition: border-color 0.2s linear;
+   }
+   &:hover {
+      cursor: pointer;
+      background-color: transparent;
+      span {
+         border-color: $title;
+      }
+   }
+}
+.next__card {
+   width: 5.5rem;
+   height: 5.5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   border: 1px solid $blue;
+   background-color: $blue;
+   transition: background-color 0.2s linear;
+   span {
+      display: block;
+      border-top: 1px solid;
+      border-right: 1px solid;
+      border-color: $white;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: -0.5rem;
+      transform: rotate(45deg);
+      transition: border-color 0.2s linear;
+   }
+   &:hover {
+      cursor: pointer;
+      background-color: transparent;
+      span {
+         border-color: $title;
+      }
+   }
+}

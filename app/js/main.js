@@ -1,9 +1,8 @@
 jQuery(document).ready(function () {
   "use script";
- 
-  var btn = $("._callback");
-  btn.on("click", function(){
-    alert("Its work");
-    prompt();
+  var serviceBtn = $(".radio__button");
+  serviceBtn.on("click", function () {
+    serviceBtn.removeClass("servicess__active");
+    $(this).toggleClass("servicess__active");
   });
 });

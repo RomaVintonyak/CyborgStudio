@@ -1,0 +1,109 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.intro {
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   height: 100vh;
+   position: relative;
+   &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      background-color: $overlay;
+   }
+   &__content {
+      position: relative;
+      z-index: 100;
+      padding-top: 13%;
+      &--title {
+         text-align: center;
+         margin-bottom: 4.5rem;
+         h1 {
+            color: $white;
+            font-family: $font;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 6.5rem;
+            line-height: 7.9rem;
+         }
+         h2 {
+            width: 35%;
+            margin: 0 auto;
+            font-family: "SansSerif";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.7rem;
+            line-height: 2.4rem;
+            color: $white;
+         }
+      }
+      &--form {
+         background-color: $background;
+         border-radius: 1.5rem;
+         padding: 3.8rem;
+      }
+   }
+}
+.intro__form {
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+}
+.contact__form {
+   width: 24%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   label {
+      font-family: $font;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      color: $text;
+      margin-bottom: 0.6rem;
+   }
+   input {
+      width: 100%;
+      height: 5rem;
+      padding-left: 2.5rem;
+      border-radius: 3px;
+      font-family: $font;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      color: #e1e1e0;
+      border-color: transparent;
+   }
+   button {
+      width: 100%;
+      height: 5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: $blue;
+      border-radius: 3rem;
+      border: 1px solid $blue;
+      font-family: $font;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      color: $white;
+      transition: color 0.2s linear, background-color 0.2s linear;
+      &:hover {
+         cursor: pointer;
+         background-color: $white;
+         color: $text;
+      }
+   }
+}
