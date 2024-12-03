@@ -15,6 +15,17 @@
          font-size: 3.8rem;
          line-height: 4.8rem;
          color: $blue;
+         @include tablet {
+            font-size: 2.8rem;
+            line-height: 3.8rem;
+         }
+         @include mobile {
+            font-size: 2rem;
+            line-height: 3rem;
+         }
+      }
+      @include tablet {
+         margin-bottom: 1rem;
       }
    }
    &__button {
@@ -22,12 +33,22 @@
       align-items: flex-start;
       justify-content: center;
       margin-bottom: 2.5rem;
+      @include tablet {
+         margin-bottom: 1rem;
+      }
+      @include mobile-xsm {
+         flex-direction: column;
+         align-items: center;
+      }
    }
    &__content {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       flex-wrap: wrap;
+      @include tablet {
+         justify-content: space-evenly;
+      }
    }
    &__footer {
       width: 100%;
@@ -35,6 +56,12 @@
       flex-direction: row;
       justify-content: center;
       align-items: flex-start;
+   }
+   @include tablet {
+      padding-top: 3rem;
+   }
+   @include mobile {
+      padding: 2rem 0;
    }
 }
 .radio__button {
@@ -62,6 +89,13 @@
       cursor: pointer;
       color: $white;
       background-color: $blue;
+   }
+   @include mobile-xsm {
+      margin-right: 0;
+      margin-bottom: 1rem;
+      &:last-child {
+         margin-bottom: 0;
+      }
    }
 }
 .servicess__active {
@@ -120,6 +154,18 @@
             margin-bottom: 0;
          }
       }
+   }
+   @include tablet {
+      width: 32%;
+   }
+   @include mobile {
+      width: 48%;
+   }
+   @include mobile-sm {
+      width: 75%;
+   }
+   @include mobile-xsm {
+      width: 100%;
    }
 }
 .card__button {
